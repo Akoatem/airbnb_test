@@ -19,7 +19,12 @@ def divide(a, b):
 
 class TestCalc(unittest.TestCase):
     
-    # def setUp(self):
+    def setUp(self):
+        print("SETUP CALLS......")
+        
+        
+    def tearDown(self):
+        print("TEARDOWN CALLS....")
        
     
     def test_add(self):
