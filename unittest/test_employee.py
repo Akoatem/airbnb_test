@@ -4,19 +4,27 @@ from employee import Employee
 
 
 class TestEmployee(unittest.TestCase):
+    # to have one thing to run down at once
     
-  def setUp(self):
-      
-      print("SETUP CALL...")
+    @classmethod 
+    def setUpClass(cls):
+        print("setUpClass")
+    
+    @classmethod
+    def tearDownClass(cls):
+        print("tearDownClass")
+         
+    def setUp(self):
+      pass
       
       #Arrange
       self.emp_1 = Employee("Ako", "Atem", 3400)
       self.emp_2 = Employee("Akon", "Atm",6000)
         
-  def tearDown(self):
-      print("TEARDOWN CALL...")
+    def tearDown(self):
+      pass
     
-  def test_email(self):
+    def test_email(self):
       print("test_email")
      # emp_1 = Employee("Ako", "Atem", 3400)
      # emp_2 = Employee("Akon", "Atm",6000)
@@ -33,7 +41,7 @@ class TestEmployee(unittest.TestCase):
       self.assertEqual(self.emp_2.email, 'Sam.Atm@gmail.com')
  
  
-  def test_full_name(self):
+    def test_full_name(self):
       print("test_full_name")
       #emp_1 = Employee("Ako", "Atem", 3400)
       #emp_2 = Employee("Akon", "Atm",6000)
@@ -49,7 +57,7 @@ class TestEmployee(unittest.TestCase):
       self.assertEqual(self.emp_1.full_name, 'Ben Atem')
       self.assertEqual(self.emp_2.full_name, 'Sam Atm')
       
-  def test_apply_raise(self):
+    def test_apply_raise(self):
       print("test_apply_raise")
       #emp_1 = Employee("Ako", "Atem", 3400)
       #emp_2 = Employee("Akon", "Atm",6000)
