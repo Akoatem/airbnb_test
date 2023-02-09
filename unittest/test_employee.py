@@ -6,6 +6,7 @@ from employee import Employee
 class TestEmployee(unittest.TestCase):
     
   def setUp(self):
+      
       print("SETUP CALL...")
       
       #Arrange
@@ -16,6 +17,7 @@ class TestEmployee(unittest.TestCase):
       print("TEARDOWN CALL...")
     
   def test_email(self):
+      print("test_email")
      # emp_1 = Employee("Ako", "Atem", 3400)
      # emp_2 = Employee("Akon", "Atm",6000)
       
@@ -32,6 +34,7 @@ class TestEmployee(unittest.TestCase):
  
  
   def test_full_name(self):
+      print("test_full_name")
       #emp_1 = Employee("Ako", "Atem", 3400)
       #emp_2 = Employee("Akon", "Atm",6000)
       
@@ -47,6 +50,7 @@ class TestEmployee(unittest.TestCase):
       self.assertEqual(self.emp_2.full_name, 'Sam Atm')
       
   def test_apply_raise(self):
+      print("test_apply_raise")
       #emp_1 = Employee("Ako", "Atem", 3400)
       #emp_2 = Employee("Akon", "Atm",6000)
       
